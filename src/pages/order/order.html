@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color="coffee" class="navBar2">
+    <ion-title>ORDER YOUR COFFEE</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="home-content2" padding>
+
+
+  <h1>TOPPINGS</h1>
+
+  <ion-item  padding style="background-color:rgb(185, 128, 42)">
+  <ion-label>Whipped Cream</ion-label>
+  <ion-checkbox color="coffee" [(ngModel)]="whippedCream"  ></ion-checkbox>
+ 
+</ion-item >
+<ion-item  padding style="background-color:rgb(185, 128, 42)">
+    <ion-label>Chocolate</ion-label>
+    <ion-checkbox color="coffee" [(ngModel)]="chocolate"></ion-checkbox>
+
+  
+  </ion-item>
+  
+  <h2>QUANTITY</h2>
+  <ion-item  padding text-center class="item" style="background-color:rgb(185, 128, 42)">
+
+    
+      <ion-col col-2>
+        <ion-col col-2><button ion-button icon-only outline color="primary" (click)="orderNumberCal(+1)" >
+        <ion-icon name="add-circle"></ion-icon>
+        </button></ion-col>
+        <ion-col col-2><button ion-button outline color="secondary" (click)="orderNumberCal(-1)" >
+        <ion-icon name="remove"></ion-icon>
+        </button></ion-col>
+        <ion-col col-2><button ion-button outline color="danger" (click)="ClearOrder()" >
+        <ion-icon name="close-circle"></ion-icon>
+        </button></ion-col><br><br>
+        <h2 padding >Number of coffee ordered : {{coffeeNumber}}</h2>
+      
+      </ion-col>
+    </ion-item>
+
+     
+
+
+  <button ion-button  padding color="coffee" outline (click)="SendOrder()">SEND ORDER</button>
+
+
+
+</ion-content>
